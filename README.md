@@ -1,9 +1,13 @@
-# reqwest
+> [!IMPORTANT]  
+> `reqwest-wasmcloud` is a fork of [seanmonstar/reqwest](https://github.com/seanmonstar/reqwest), a prevalent Rust HTTP client library. This crate exists so that reqwest is available for Rust developers targeting `wasm32-wasip2` on the stable toolchain. When [reqwest PR #2453](https://github.com/seanmonstar/reqwest/pull/2453) is merged, this crate will be deprecated in favor of the original crate.
+>
+> `reqwest-wasmcloud` depends on [rust-url-wasmcloud](https://github.com/wasmCloud/rust-url-wasmcloud) because of an unstable library feature that prevents the `url` crate from compiling on stable `wasm32-wasip2`.
 
-[![crates.io](https://img.shields.io/crates/v/reqwest.svg)](https://crates.io/crates/reqwest)
-[![Documentation](https://docs.rs/reqwest/badge.svg)](https://docs.rs/reqwest)
+# reqwest-wasmcloud
+
+[![crates.io](https://img.shields.io/crates/v/reqwest.svg)](https://crates.io/crates/reqwest-wasmcloud)
+[![Documentation](https://docs.rs/reqwest/badge.svg)](https://docs.rs/reqwest-wasmcloud)
 [![MIT/Apache-2 licensed](https://img.shields.io/crates/l/reqwest.svg)](./LICENSE-APACHE)
-[![CI](https://github.com/seanmonstar/reqwest/workflows/CI/badge.svg)](https://github.com/seanmonstar/reqwest/actions?query=workflow%3ACI)
 
 An ergonomic, batteries-included HTTP Client for Rust.
 
