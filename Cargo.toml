@@ -1,5 +1,5 @@
 [package]
-name = "reqwest"
+name = "reqwest-wasmcloud"
 version = "0.12.8"
 description = "higher level HTTP client library"
 keywords = ["http", "request", "client"]
@@ -98,10 +98,10 @@ __internal_proxy_sys_no_cache = []
 [dependencies]
 base64 = "0.22"
 http = "1"
-url = "2.4"
+url = { package = "url-wasmcloud", git = "https://github.com/wasmCloud/rust-url-wasmcloud", branch = "main" }
 bytes = "1.0"
 serde = "1.0"
-serde_urlencoded = "0.7.1"
+serde_urlencoded = { package = "serde_urlencoded-wasmcloud", git = "https://github.com/wasmCloud/serde_urlencoded-wasmcloud", branch = "master" }
 tower-service = "0.3"
 futures-core = { version = "0.3.28", default-features = false }
 futures-util = { version = "0.3.28", default-features = false }
@@ -287,8 +287,3 @@ required-features = ["deflate", "stream"]
 name = "multipart"
 path = "tests/multipart.rs"
 required-features = ["multipart"]
-
-# https://github.com/servo/rust-url/pull/983
-[patch.crates-io]
-url = { git = "https://github.com/servo/rust-url", rev = "fc447cce1d2c06ef0bec3dbadce56b83e46ca1ff"}
-form_urlencoded = { git = "https://github.com/servo/rust-url", rev = "fc447cce1d2c06ef0bec3dbadce56b83e46ca1ff"}
