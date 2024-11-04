@@ -1,5 +1,5 @@
 [package]
-name = "reqwest"
+name = "reqwest-wasmcloud"
 version = "0.12.8"
 description = "higher level HTTP client library"
 keywords = ["http", "request", "client"]
@@ -287,8 +287,3 @@ required-features = ["deflate", "stream"]
 name = "multipart"
 path = "tests/multipart.rs"
 required-features = ["multipart"]
-
-# https://github.com/servo/rust-url/pull/983
-[patch.crates-io]
-url = { git = "https://github.com/servo/rust-url", rev = "fc447cce1d2c06ef0bec3dbadce56b83e46ca1ff"}
-form_urlencoded = { git = "https://github.com/servo/rust-url", rev = "fc447cce1d2c06ef0bec3dbadce56b83e46ca1ff"}
